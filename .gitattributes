@@ -1,2 +1,3 @@
 *.zip filter=lfs diff=lfs merge=lfs -text
 dataset/image_data/** filter=lfs diff=lfs merge=lfs -text
+dataset/stl_data/** filter=lfs diff=lfs merge=lfs -text
