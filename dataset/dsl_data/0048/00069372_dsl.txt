@@ -1,0 +1,18 @@
+start
+sketch:sketch_1(origin=(0.16, 0.13, 0.00), normal=(0.0000, 0.0000, 1.0000), x_axis=(1.0000, 0.0000, 0.0000))
+circle:circle_1(center=(0.4438,0.1625), radius=0.0250)
+loop:loop_1(entities=[circle_1])
+extrude:extrude_1(entity=sketch_1, length1= 0.02, length2= -0.00, direction= (0.00, 0.00, 1.00), operation_type= AddFeatureOperation)
+set var face_1=face(extrude_1:bottom_cap())
+chamfer:chamfer_1(entities=[face_1], distance1=0.01, distance2=0.01)
+sketch:sketch_2(origin=(-0.16, 0.13, 0.00), normal=(0.0000, 0.0000, 1.0000), x_axis=(1.0000, 0.0000, 0.0000))
+circle:circle_2(center=(0.1618,0.1618), radius=0.0236)
+loop:loop_2(entities=[circle_2])
+extrude:extrude_2(entity=sketch_2, length1= 0.02, length2= -0.00, direction= (0.00, 0.00, 1.00), operation_type= AddFeatureOperation)
+set var edge_2=edge(extrude_2:top_edge(line(sketch_2:circle_2)))
+fillet:fillet_1(entities=[edge_2], radius=0.02)
+sketch:sketch_3(origin=(-0.16, -0.45, 0.00), normal=(0.0000, 0.0000, 1.0000), x_axis=(1.0000, 0.0000, 0.0000))
+circle:circle_3(center=(0.1625,0.1500), radius=0.0250)
+loop:loop_3(entities=[circle_3])
+extrude:extrude_3(entity=sketch_3, length1= 0.02, length2= -0.00, direction= (0.00, 0.00, 1.00), operation_type= AddFeatureOperation)
+end

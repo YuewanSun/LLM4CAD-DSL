@@ -1,0 +1,12 @@
+start
+sketch:sketch_1(origin=(-0.09, 0.00, -0.18), normal=(0.0000, -1.0000, 0.0000), x_axis=(1.0000, 0.0000, -0.0000))
+circle:circle_1(center=(0.0684,0.4579), radius=0.0421)
+loop:loop_1(entities=[circle_1])
+extrude:extrude_1(entity=sketch_1, length1= 0.75, length2= -0.00, direction= (0.00, -1.00, 0.00), operation_type= AddFeatureOperation)
+set var face_1=face(extrude_1:bottom_cap())
+fillet:fillet_1(entities=[face_1], radius=0.01)
+sketch:sketch_2(origin=(-0.20, 0.00, -0.28), normal=(0.0000, -1.0000, 0.0000), x_axis=(1.0000, 0.0000, -0.0000))
+circle:circle_2(center=(0.1658,0.6553), radius=0.0316)
+loop:loop_2(entities=[circle_2])
+extrude:extrude_2(entity=sketch_2, length1= 0.32, length2= -0.00, direction= (0.00, -1.00, 0.00), operation_type= AddFeatureOperation)
+end

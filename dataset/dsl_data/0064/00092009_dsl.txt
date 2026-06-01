@@ -1,0 +1,11 @@
+start
+sketch:sketch_1(origin=(-0.75, 0.00, 0.00), normal=(0.0000, 0.0000, 1.0000), x_axis=(1.0000, 0.0000, 0.0000))
+vertex:v_1 = (1.0105, -0.5211)
+vertex:v_2 = (1.3105, 0.1421)
+arc:arc_1(start=v_1, end=v_2, through=[1.27687714, -0.24210858])
+line:line_2(start=v_2, end=v_1)
+loop:loop_1(entities=[arc_1, line_2])
+extrude:extrude_1(entity=sketch_1, length1= 0.33, length2= -0.00, direction= (0.00, 0.00, 1.00), operation_type= AddFeatureOperation)
+set var face_1=face(extrude_1:top_cap())
+chamfer:chamfer_1(entities=[face_1], distance1=0.02, distance2=0.05)
+end

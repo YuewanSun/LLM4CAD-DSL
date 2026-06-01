@@ -1,0 +1,18 @@
+start
+sketch:sketch_1(origin=(-0.43, -0.10, 0.00), normal=(0.0000, 0.0000, 1.0000), x_axis=(1.0000, 0.0000, 0.0000))
+circle:circle_1(center=(0.4290,0.1004), radius=0.3104)
+loop:loop_1(entities=[circle_1])
+extrude:extrude_1(entity=sketch_1, length1= 0.35, length2= -0.00, direction= (0.00, 0.00, 1.00), operation_type= AddFeatureOperation)
+sketch:sketch_2(origin=(-0.31, 0.00, 0.35), normal=(0.0000, 0.0000, 1.0000), x_axis=(1.0000, 0.0000, 0.0000))
+circle:circle_2(center=(0.3118,0.0000), radius=0.3118)
+loop:loop_2(entities=[circle_2])
+extrude:extrude_2(entity=sketch_2, length1= -0.33, length2= -0.00, direction= (0.00, 0.00, 1.00), operation_type= CutFeatureOperation)
+sketch:sketch_3(origin=(-0.31, -0.16, 0.35), normal=(0.0000, 0.0000, 1.0000), x_axis=(1.0000, 0.0000, 0.0000))
+circle:circle_3(center=(0.3183,0.1627), radius=0.3112)
+loop:loop_3(entities=[circle_3])
+extrude:extrude_3(entity=sketch_3, length1= -0.33, length2= -0.00, direction= (0.00, 0.00, 1.00), operation_type= CutFeatureOperation)
+sketch:sketch_4(origin=(-0.11, -0.75, 0.18), normal=(0.0000, -1.0000, 0.0000), x_axis=(1.0000, 0.0000, -0.0000))
+circle:circle_4(center=(0.1105,0.0000), radius=0.1105)
+loop:loop_4(entities=[circle_4])
+extrude:extrude_4(entity=sketch_4, length1= -0.53, length2= -0.00, direction= (0.00, -1.00, 0.00), operation_type= CutFeatureOperation)
+end

@@ -1,0 +1,10 @@
+start
+sketch:sketch_1(origin=(0.00, 0.00, 0.00), normal=(1.0000, 0.0000, 0.0000), x_axis=(0.0000, 1.0000, -0.0000))
+circle:circle_1(center=(0.4658,0.2842), radius=0.1184)
+loop:loop_1(entities=[circle_1])
+extrude:extrude_1(entity=sketch_1, length1= -0.09, length2= -0.00, direction= (1.00, 0.00, 0.00), operation_type= AddFeatureOperation)
+set var face_1=face(extrude_1:top_cap())
+chamfer:chamfer_1(entities=[face_1], distance1=0.01, distance2=0.02)
+set var edge_2=edge(extrude_1:bottom_edge(line(sketch_1:circle_1)))
+chamfer:chamfer_2(entities=[edge_2], distance1=0.02, distance2=0.02)
+end

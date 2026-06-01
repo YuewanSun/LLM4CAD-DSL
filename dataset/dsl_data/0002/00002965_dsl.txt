@@ -1,0 +1,14 @@
+start
+sketch:sketch_1(origin=(-0.46, 0.00, -0.08), normal=(0.0000, -1.0000, 0.0000), x_axis=(1.0000, 0.0000, -0.0000))
+vertex:v_1 = (0.1020, 0.2243)
+vertex:v_2 = (0.3824, 0.2243)
+line:line_1(start=v_1, end=v_2)
+vertex:v_3 = (0.3824, 0.3008)
+arc:arc_2(start=v_2, end=v_3, through=[0.42064145, 0.26258224])
+vertex:v_4 = (0.1020, 0.3008)
+line:line_3(start=v_3, end=v_4)
+arc:arc_4(start=v_4, end=v_1, through=[0.14021382, 0.26258224])
+loop:loop_1(entities=[line_1, arc_2, line_3, arc_4])
+set var wire_1=line(sketch_1:line_1)
+revolve:revolve_1(entity=sketch_1, axis=wire_1, angle1=4.24, angle2=0.00, operation_type= IntersectFeatureOperation)
+end

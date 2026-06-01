@@ -1,0 +1,16 @@
+start
+sketch:sketch_1(origin=(-0.26, 0.00, 0.31), normal=(0.0000, -1.0000, 0.0000), x_axis=(1.0000, 0.0000, -0.0000))
+vertex:v_1 = (0.0000, 0.0000)
+vertex:v_2 = (0.5078, 0.0000)
+line:line_1(start=v_1, end=v_2)
+vertex:v_3 = (0.2566, 0.4383)
+line:line_2(start=v_2, end=v_3)
+line:line_3(start=v_3, end=v_1)
+loop:loop_1(entities=[line_1, line_2, line_3])
+set var wire_1=line(sketch_1:line_3)
+revolve:revolve_1(entity=sketch_1, axis=wire_1, angle1=180.71, angle2=0.00, operation_type= IntersectFeatureOperation)
+sketch:sketch_2(origin=(-0.26, 0.00, -0.20), normal=(0.0000, -1.0000, 0.0000), x_axis=(1.0000, 0.0000, -0.0000))
+circle:circle_4(center=(0.1924,0.1924), radius=0.0641)
+loop:loop_2(entities=[circle_4])
+extrude:extrude_1(entity=sketch_2, length1= 0.51, length2= -0.00, direction= (0.00, -1.00, 0.00), operation_type= AddFeatureOperation)
+end

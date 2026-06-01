@@ -1,0 +1,17 @@
+start
+sketch:sketch_1(origin=(-0.56, -0.09, 0.00), normal=(0.0000, 0.0000, 1.0000), x_axis=(1.0000, 0.0000, 0.0000))
+vertex:v_1 = (0.0000, 0.0000)
+vertex:v_2 = (0.5595, 0.0000)
+line:line_1(start=v_1, end=v_2)
+vertex:v_3 = (0.5595, 0.1865)
+arc:arc_2(start=v_2, end=v_3, through=[0.65279605, 0.09325658])
+vertex:v_4 = (0.1865, 0.1865)
+line:line_3(start=v_3, end=v_4)
+vertex:v_5 = (0.0000, 0.3730)
+arc:arc_4(start=v_4, end=v_5, through=[0.05462844, 0.24114160])
+arc:arc_5(start=v_5, end=v_1, through=[-0.18651316, 0.18651316])
+loop:loop_1(entities=[line_1, arc_2, line_3, arc_4, arc_5])
+extrude:extrude_1(entity=sketch_1, length1= 0.09, length2= -0.00, direction= (0.00, 0.00, 1.00), operation_type= AddFeatureOperation)
+set var edge_1=edge(extrude_1:bottom_edge(line(sketch_1:arc_4)))
+chamfer:chamfer_1(entities=[edge_1], distance1=0.03, distance2=0.01)
+end

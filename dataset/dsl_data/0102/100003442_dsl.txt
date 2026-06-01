@@ -1,0 +1,12 @@
+start
+sketch:sketch_1(origin=(0.00, 0.00, 0.00), normal=(1.0000, 0.0000, 0.0000), x_axis=(0.0000, 1.0000, -0.0000))
+vertex:v_1 = (-0.0000, 0.0000)
+vertex:v_2 = (0.3783, 0.1362)
+arc:arc_1(start=v_1, end=v_2, through=[0.20095984, 0.03527238])
+vertex:v_3 = (0.0000, 0.7188)
+arc:arc_2(start=v_2, end=v_3, through=[0.25080980, 0.46750935])
+line:line_3(start=v_3, end=v_1)
+loop:loop_1(entities=[arc_1, arc_2, line_3])
+set var wire_1=line(sketch_1:line_3)
+revolve:revolve_1(entity=sketch_1, axis=wire_1, angle1=360.00, angle2=0.00, operation_type= AddFeatureOperation)
+end
