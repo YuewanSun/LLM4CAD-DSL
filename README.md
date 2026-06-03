@@ -13,6 +13,7 @@ The dataset is built from WHUCAD and reconstructed into a text-based CAD DSL des
 - **Advanced CAD operations** beyond basic extrusion, including fillet, chamfer, revolve, groove, and pocket.
 - **LLM-oriented representation** with explicit, human-readable commands and symbolic geometry references.
 - **Useful for image-to-CAD and editing tasks**, where models need to produce executable, editable CAD construction sequences.
+- **Online DSL-to-CAD parser** available on Hugging Face Spaces: [LLM4CAD-DSL-Parser](https://huggingface.co/spaces/yuewansun/LLM4CAD-DSL-Parser).
 
 ## Dataset Structure
 
@@ -117,6 +118,14 @@ Because the dataset provides aligned scripts, images, and geometry, it can suppo
 Conventional CAD scripting workflows often require coordinate-heavy geometric reasoning. For example, applying a fillet or chamfer may require selecting an exact edge based on 3D coordinates or topology queries. This is difficult for current LLMs and makes editing brittle: changing an earlier feature may force many downstream coordinate references to be recomputed.
 
 LLM4CAD-DSL addresses this by using explicit commands and symbolic references to generated entities. A model can refer to geometry by named construction relationships instead of recomputing low-level coordinates. This makes the representation more readable, more local to edit, and better aligned with language-model generation.
+
+## Online DSL Parser
+
+You can try the LLM4CAD-DSL parser online through the Hugging Face Space:
+
+[LLM4CAD-DSL-Parser](https://huggingface.co/spaces/yuewansun/LLM4CAD-DSL-Parser)
+
+The parser converts LLM4CAD-DSL scripts into CAD models, making it a convenient way to inspect dataset examples, test generated DSL programs, and demonstrate the connection between the textual DSL representation and reconstructed 3D geometry.
 
 ## Getting Started
 
