@@ -72,6 +72,25 @@ LLM4CAD-DSL supports both basic sketch construction and advanced solid modeling 
 | Detail operations | fillet, chamfer |
 | Script utilities | variable assignment, symbolic entity references |
 
+### Command Syntax Examples
+
+The table below shows examples of supported LLM4CAD-DSL operations and their corresponding command syntax.
+
+| Operation | Example |
+| --- | --- |
+| Define sketch | `sketch:sketch_1(origin=(-0.23, -0.09, 0.00), normal=(0.0000, 0.0000, 1.0000))` |
+| Define variable | `set var edge_2=edge(revolve_1:ridge(vertex(sketch_1:v_2)))`<br>`set var face_1=face(extrude_1:side(line(sketch_1:arc_1)))` |
+| Add line | `vertex:v_1=(0.0000, 0.0000)`<br>`vertex:v_2=(0.7500, 0.0000)`<br>`line:line_1(start=v_1, end=v_2)` |
+| Add arc | `arc:arc_2(start=v_12, end=v_13, center=v_14)` |
+| Add circle | `circle:circle_1(center=vertex_1, radius=0.0103)` |
+| Add loop | `loop:loop_2(entities=[line_11, arc_13, line_14, circle_16])` |
+| Extrude | `extrude:extrude_1(entity=sketch_1, length1=-0.75, length2=0.00)` |
+| Revolve | `revolve:revolve_1(entity=sketch_1, axis=line_1, angle1=360.00, angle2=0.00)` |
+| Fillet | `fillet:fillet_1(entities=[edge_5, edge_6, edge_7], radius=0.04)` |
+| Chamfer | `chamfer:chamfer_1(entities=[edge_1, face_2], distance1=0.01, distance2=0.02)` |
+| Pocket | `pocket:pocket_1(entity=sketch_2, length1=0.34, length2=0.00)` |
+| Groove | `groove:groove_1(entity=sketch_1, axis=line_1, angle1=360.00, angle2=0.00)` |
+
 The operation distribution and sequence-length distribution show that the dataset contains many nontrivial CAD programs, not only short extrusion-only examples.
 
 ![Operation distribution](readme_assets/operation_distribution.png)
