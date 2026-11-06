@@ -1,0 +1,7 @@
+start
+sketch:sketch_1(origin=(0.00, 0.27, 0.00), normal=(1.0000, 0.0000, 0.0000), x_axis=(0.0000, 1.0000, -0.0000))
+circle:circle_1(center=(0.0553,0.0000), radius=0.0553)
+loop:loop_1(entities=[circle_1])
+set var wire_1=line(sketch_1:VDirection)
+revolve:revolve_1(entity=sketch_1, axis=wire_1, angle1=360.00, angle2=0.00, operation_type= AddFeatureOperation)
+end

@@ -1,0 +1,17 @@
+start
+sketch:sketch_1(origin=(0.00, -0.34, 0.00), normal=(1.0000, 0.0000, 0.0000), x_axis=(0.0000, 1.0000, -0.0000))
+vertex:v_1 = (0.0000, 0.0000)
+vertex:v_2 = (0.0687, -0.1664)
+arc:arc_1(start=v_1, end=v_2, through=[-0.02123329, -0.10619232])
+vertex:v_3 = (0.2678, -0.2388)
+arc:arc_2(start=v_2, end=v_3, through=[0.17803147, -0.17575062])
+vertex:v_4 = (0.3438, -0.2388)
+line:line_3(start=v_3, end=v_4)
+vertex:v_5 = (0.3438, 0.0000)
+line:line_4(start=v_4, end=v_5)
+line:line_5(start=v_5, end=v_1)
+loop:loop_1(entities=[arc_1, arc_2, line_3, line_4, line_5])
+circle:circle_6(center=(0.0688,-0.0688), radius=0.0362)
+loop:loop_2(entities=[circle_6])
+extrude:extrude_1(entity=sketch_1, length1= 0.07, length2= -0.00, direction= (1.00, 0.00, 0.00), operation_type= AddFeatureOperation)
+end

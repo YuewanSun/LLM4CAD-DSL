@@ -1,0 +1,6 @@
+start
+sketch:sketch_1(origin=(0.00, -0.02, 0.00), normal=(1.0000, 0.0000, 0.0000), x_axis=(0.0000, 1.0000, -0.0000))
+circle:circle_1(center=(0.0197,0.0000), radius=0.0169)
+loop:loop_1(entities=[circle_1])
+extrude:extrude_1(entity=sketch_1, length1= 0.75, length2= -0.75, direction= (1.00, 0.00, 0.00), operation_type= AddFeatureOperation)
+end

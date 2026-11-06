@@ -1,0 +1,16 @@
+start
+sketch:sketch_1(origin=(-0.70, 0.25, 0.00), normal=(0.0000, 0.0000, 1.0000), x_axis=(1.0000, 0.0000, 0.0000))
+circle:circle_1(center=(1.0271,0.1935), radius=0.0744)
+loop:loop_1(entities=[circle_1])
+extrude:extrude_1(entity=sketch_1, length1= -0.10, length2= -0.00, direction= (0.00, 0.00, 1.00), operation_type= AddFeatureOperation)
+sketch:sketch_2(origin=(-0.71, -0.25, 0.00), normal=(0.0000, 0.0000, 1.0000), x_axis=(1.0000, 0.0000, 0.0000))
+circle:circle_2(center=(0.7074,0.2461), radius=0.2307)
+loop:loop_2(entities=[circle_2])
+extrude:extrude_2(entity=sketch_2, length1= -0.10, length2= -0.00, direction= (0.00, 0.00, 1.00), operation_type= AddFeatureOperation)
+sketch:sketch_3(origin=(-0.71, -0.25, 0.00), normal=(0.0000, 0.0000, 1.0000), x_axis=(1.0000, 0.0000, 0.0000))
+circle:circle_3(center=(0.9377,-0.2530), radius=0.0744)
+loop:loop_3(entities=[circle_3])
+extrude:extrude_3(entity=sketch_3, length1= -0.10, length2= -0.00, direction= (0.00, 0.00, 1.00), operation_type= AddFeatureOperation)
+set var face_1=face(extrude_3:bottom_cap())
+fillet:fillet_1(entities=[face_1], radius=0.01)
+end

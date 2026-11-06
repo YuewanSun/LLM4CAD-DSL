@@ -1,0 +1,15 @@
+start
+sketch:sketch_1(origin=(0.00, -0.75, 0.08), normal=(1.0000, 0.0000, 0.0000), x_axis=(0.0000, 1.0000, -0.0000))
+vertex:v_1 = (0.3143, -0.0282)
+vertex:v_2 = (0.3264, -0.0282)
+arc:arc_1(start=v_1, end=v_2, through=[0.32035362, -0.03425164])
+vertex:v_3 = (0.3385, 0.0282)
+arc:arc_2(start=v_2, end=v_3, through=[0.33140350, 0.00022263])
+vertex:v_4 = (0.3264, 0.0322)
+arc:arc_3(start=v_3, end=v_4, through=[0.33445724, 0.03626645])
+arc:arc_4(start=v_4, end=v_1, through=[0.31924047, 0.00223743])
+loop:loop_1(entities=[arc_1, arc_2, arc_3, arc_4])
+extrude:extrude_1(entity=sketch_1, length1= 0.01, length2= -0.00, direction= (1.00, 0.00, 0.00), operation_type= AddFeatureOperation)
+set var face_1=face(extrude_1:top_cap())
+chamfer:chamfer_1(entities=[face_1], distance1=0.01, distance2=0.01)
+end
